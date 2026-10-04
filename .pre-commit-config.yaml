@@ -1,0 +1,41 @@
+# Runs the quality gate on every commit. Hooks use the project's venv tools via
+# PATH (`language: system`), so commit with the venv activated.
+# Setup once per clone: `pre-commit install`.
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-format
+        name: ruff format --check
+        entry: ruff format --check
+        language: system
+        types: [python]
+      - id: ruff-check
+        name: ruff check
+        entry: ruff check
+        language: system
+        types: [python]
+      - id: mypy
+        name: mypy (strict)
+        entry: mypy .
+        language: system
+        pass_filenames: false
+        types: [python]
+      - id: pytest
+        name: pytest
+        entry: pytest
+        language: system
+        pass_filenames: false
+        types: [python]
+      - id: detect-secrets
+        name: detect-secrets
+        entry: detect-secrets-hook --baseline .secrets.baseline
+        language: system
+      # Needs network, so not run on every commit. Run on demand:
+      #   pre-commit run --hook-stage manual pip-audit
+      - id: pip-audit
+        name: pip-audit (known-vulnerable dependencies)
+        entry: pip-audit -r requirements.txt
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [manual]
