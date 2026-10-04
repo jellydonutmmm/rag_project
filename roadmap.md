@@ -34,7 +34,7 @@ Build order for the RAG Q&A project, derived from README.md and CLAUDE.md (start
 
 - [x] Choose the document domain and record why in the README: forest establishment (reforestation and afforestation) on public, donated and purchased land in New York State
 - [ ] Survey candidate sources (USDA Forest Service, NRCS, NYS DEC, SUNY ESF, Cornell Extension, land trusts) for text-based documents covering both technical planting guidance and land-category/program rules; adjust scope if coverage is thin
-- [ ] Decide the single research question and the comparisons to run, using the survey to check the corpus can support them (provisional question: does combining keyword and embedding retrieval find the right passages more reliably than embedding alone, on New York forest establishment documents?); record it in `docs/research-question.md`
+- [ ] Decide the single research question and the comparisons to run, using the survey to check the corpus can support them (provisional question, framed as information access for forestry practice: can retrieval tools reliably help a landowner or forester find the right guidance for establishing forest on public, donated or purchased land in New York, and does combining keyword and embedding retrieval find the right passages more reliably than embedding alone?); record it in `docs/research-question.md`
 - [ ] Freeze the question and comparisons before writing the Section 7 question set or looking at any retrieval results, so the study is not shaped by what the results turn out to be
 - [ ] Record each source's license and provenance in `docs/corpus.md`
 - [ ] Download script for a small, reproducible corpus (raw data is gitignored); tests with mocked network
@@ -140,6 +140,7 @@ Written by the author in their own words, separate from the README. The program'
 - [ ] Fix the defaults: about 3 to 5 pages including figures and tables; methods-style structure (summary, motivation, data, method, results, discussion, limitations); one or two figures and one results table; written for a forestry faculty reader, with technical terms defined on first use
 - [ ] Restate the frozen research question from `docs/research-question.md` (decided in Section 2) as the paper's central question
 - [ ] Add a one-line disclosure that the software was built with AI coding assistance and that the analysis and writing are the author's own
-- [ ] Outline: motivation, data, method, results, interpretation, limitations
+- [ ] Frame the paper for forestry readers: the problem is finding reliable establishment guidance across agency documents, and the retrieval measurements are the evidence; write the evaluation questions as real landowner and forester questions, and discuss the stakes of wrong or overconfident answers (e.g. Forest Preserve and program-eligibility rules)
+- [ ] Outline: motivation (the forestry information problem), data, method, results, error analysis in forestry terms (e.g. planting-density tables, land-category rules), implications for extension services and land managers, limitations
 - [ ] Draft by the author; figures and tables generated from `eval/results/`
 - [ ] Revise for plain-language clarity; check every number against the results files
