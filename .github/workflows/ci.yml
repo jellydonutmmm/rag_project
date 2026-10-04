@@ -1,0 +1,29 @@
+# Runs the same quality gate as the pre-commit hook, on every push and pull
+# request, so a green check on main means the gate passed on a clean machine.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: ruff format --check .
+      - run: ruff check .
+      - run: mypy .
+      - run: pytest
+      - run: detect-secrets-hook --baseline .secrets.baseline $(git ls-files)
+      - run: pip-audit -r requirements.txt
