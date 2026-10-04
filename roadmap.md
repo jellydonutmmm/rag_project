@@ -10,16 +10,16 @@ Build order for the RAG Q&A project, derived from README.md and CLAUDE.md (start
 
 ## 0. Project setup
 
-- [ ] Add `roadmap.md`; commit and push
-- [ ] Create venv, `/src`, `/tests`, `/docs`; extend `.gitignore` (`.env`, `*.log`, vector store and data dirs, caches)
-- [ ] Install dev tools (pytest, pytest-cov, ruff, mypy strict, pre-commit, detect-secrets, pip-audit); `pip freeze > requirements.txt`
-- [ ] Config files: `pytest.ini` (90% coverage gate), `mypy.ini` (strict), `ruff.toml`
-- [ ] `.pre-commit-config.yaml` running format check, lint, mypy, pytest and detect-secrets on every commit; `pre-commit install`; test the secret scan once with a fake key
-- [ ] `.env.example` (names only)
-- [ ] GitHub Actions CI workflow running the same gate on every push and pull request; badge in README
-- [ ] Repo hygiene: LICENSE, `.github/dependabot.yml`, `.editorconfig`
-- [ ] Rewrite CLAUDE.md for the real project (replace "Project status", delete `CLAUDE-template.md`)
-- [ ] Push
+- [x] Add `roadmap.md`; commit and push
+- [x] Create venv, `/src`, `/tests`, `/docs`; extend `.gitignore` (`.env`, `*.log`, vector store and data dirs, caches)
+- [x] Install dev tools (pytest, pytest-cov, ruff, mypy strict, pre-commit, detect-secrets, pip-audit); `pip freeze > requirements.txt`
+- [x] Config files: `pytest.ini` (90% coverage gate), `mypy.ini` (strict), `ruff.toml`
+- [x] `.pre-commit-config.yaml` running format check, lint, mypy, pytest and detect-secrets on every commit; `pre-commit install`; test the secret scan once with a fake key
+- [x] `.env.example` (names only)
+- [x] GitHub Actions CI workflow running the same gate on every push and pull request; badge in README
+- [x] Repo hygiene: LICENSE, `.github/dependabot.yml`, `.editorconfig`
+- [x] Rewrite CLAUDE.md for the real project (replace "Project status", delete `CLAUDE-template.md`)
+- [x] Push
 
 ## 1. Logging & error-handling foundation
 
