@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific: raw corpus, vector store, eval scratch output
+data/
+chroma_db/
+*.sqlite3
+eval/results/*.tmp

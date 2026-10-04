@@ -1,0 +1,11 @@
+line-length = 100
+target-version = "py313"
+
+[lint]
+# E/F: pycodestyle + pyflakes, I: import order, B: bugbear, UP: pyupgrade,
+# S: bandit security checks, SIM: simplifications, C4: comprehensions
+select = ["E", "F", "I", "B", "UP", "S", "SIM", "C4"]
+
+[lint.per-file-ignores]
+# assert is how pytest tests work
+"tests/*" = ["S101"]
