@@ -133,9 +133,11 @@ Rotate / revoke: console, API keys, then update `.env` and any CI secret.
 
 ## 14. Writing sample (MSU hybrid MA in Forestry application)
 
-Written by the author in their own words, separate from the README. Confirm MSU's requirements (length, format, rules on AI assistance and disclosure) before drafting.
+Written by the author in their own words, separate from the README. The program's only stated requirement is a sample that represents quantitative and written communication skills; it gives no length, format or AI-assistance rules, so the defaults below are our own choices.
 
-- [ ] Confirm the prompt and requirements; decide the single research question (e.g. does hybrid retrieval beat dense-only on New York forest establishment documents?)
+- [ ] Fix the defaults: about 3 to 5 pages including figures and tables; methods-style structure (summary, motivation, data, method, results, discussion, limitations); one or two figures and one results table; written for a forestry faculty reader, with technical terms defined on first use
+- [ ] Decide the single research question (e.g. does hybrid retrieval beat dense-only on New York forest establishment documents?) before designing the Section 7 question set
+- [ ] Add a one-line disclosure that the software was built with AI coding assistance and that the analysis and writing are the author's own
 - [ ] Outline: motivation, data, method, results, interpretation, limitations
 - [ ] Draft by the author; figures and tables generated from `eval/results/`
 - [ ] Revise for plain-language clarity; check every number against the results files
