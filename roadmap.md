@@ -34,6 +34,8 @@ Build order for the RAG Q&A project, derived from README.md and CLAUDE.md (start
 
 - [x] Choose the document domain and record why in the README: forest establishment (reforestation and afforestation) on public, donated and purchased land in New York State
 - [ ] Survey candidate sources (USDA Forest Service, NRCS, NYS DEC, SUNY ESF, Cornell Extension, land trusts) for text-based documents covering both technical planting guidance and land-category/program rules; adjust scope if coverage is thin
+- [ ] Decide the single research question and the comparisons to run, using the survey to check the corpus can support them (provisional question: does combining keyword and embedding retrieval find the right passages more reliably than embedding alone, on New York forest establishment documents?); record it in `docs/research-question.md`
+- [ ] Freeze the question and comparisons before writing the Section 7 question set or looking at any retrieval results, so the study is not shaped by what the results turn out to be
 - [ ] Record each source's license and provenance in `docs/corpus.md`
 - [ ] Download script for a small, reproducible corpus (raw data is gitignored); tests with mocked network
 - [ ] Push
@@ -136,7 +138,7 @@ Rotate / revoke: console, API keys, then update `.env` and any CI secret.
 Written by the author in their own words, separate from the README. The program's only stated requirement is a sample that represents quantitative and written communication skills; it gives no length, format or AI-assistance rules, so the defaults below are our own choices.
 
 - [ ] Fix the defaults: about 3 to 5 pages including figures and tables; methods-style structure (summary, motivation, data, method, results, discussion, limitations); one or two figures and one results table; written for a forestry faculty reader, with technical terms defined on first use
-- [ ] Decide the single research question (e.g. does hybrid retrieval beat dense-only on New York forest establishment documents?) before designing the Section 7 question set
+- [ ] Restate the frozen research question from `docs/research-question.md` (decided in Section 2) as the paper's central question
 - [ ] Add a one-line disclosure that the software was built with AI coding assistance and that the analysis and writing are the author's own
 - [ ] Outline: motivation, data, method, results, interpretation, limitations
 - [ ] Draft by the author; figures and tables generated from `eval/results/`
