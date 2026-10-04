@@ -2,7 +2,7 @@
 
 ## Project overview
 
-A RAG (retrieval-augmented generation) Q&A system over a real, messy document set: ingest, chunk, embed, retrieve (hybrid), and generate grounded, cited answers with Claude, plus an `/eval` harness that measures retrieval and answer quality. The document domain is not chosen yet (roadmap Section 2); `README.md` is still the template until then. The project is meant to be reviewed by potential employers, so quality, tests, and documentation matter as much as features.
+A RAG (retrieval-augmented generation) Q&A system over a real, messy document set: ingest, chunk, embed, retrieve (hybrid), and generate grounded, cited answers with Claude, plus an `/eval` harness that measures retrieval and answer quality. The domain is forest establishment (reforestation and afforestation) on public, donated and purchased land in New York State. The main written product is a retrieval-quality study for a graduate application writing sample (roadmap Section 14), so the eval's rigor matters. The rest of `README.md` is still the template and gets filled in as decisions are made. The project is meant to be reviewed by potential employers, so quality, tests, and documentation matter as much as features.
 
 `roadmap.md` is the build order and the source of truth for progress. Follow it in order.
 

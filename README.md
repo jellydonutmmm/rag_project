@@ -10,7 +10,7 @@ A RAG (retrieval-augmented generation) system that answers questions over a real
 
 ## Why this dataset
 
-[1-2 sentences: why you picked this domain. Bonus points if it draws on your 30 years of industry experience — that's a differentiator.]
+The domain is forest establishment (reforestation and afforestation) on public, donated and purchased land in New York State. The guidance is spread across technical planting guides, agency program rules and land-category policies (state forests, the Forest Preserve, easements, land trusts), and the right answer often depends on which category a parcel falls into. That makes retrieval hard to get right and easy to measure. This is a research demo, not legal or professional forestry advice.
 
 ## Key engineering decisions
 

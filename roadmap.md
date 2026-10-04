@@ -32,7 +32,8 @@ Build order for the RAG Q&A project, derived from README.md and CLAUDE.md (start
 
 ## 2. Domain & corpus
 
-- [ ] Choose the document domain (decision pending) and record why in the README
+- [x] Choose the document domain and record why in the README: forest establishment (reforestation and afforestation) on public, donated and purchased land in New York State
+- [ ] Survey candidate sources (USDA Forest Service, NRCS, NYS DEC, SUNY ESF, Cornell Extension, land trusts) for text-based documents covering both technical planting guidance and land-category/program rules; adjust scope if coverage is thin
 - [ ] Record each source's license and provenance in `docs/corpus.md`
 - [ ] Download script for a small, reproducible corpus (raw data is gitignored); tests with mocked network
 - [ ] Push
@@ -70,10 +71,12 @@ Build order for the RAG Q&A project, derived from README.md and CLAUDE.md (start
 
 ## 7. Evaluation harness (`/eval`)
 
-- [ ] Hand-written question set with expected source passages (at least 30 questions, including unanswerable ones)
-- [ ] Retrieval metrics: hit rate@k, MRR, recall@k
+- [ ] Hand-written question set with expected source passages (aim for 50 to 100 questions, including unanswerable ones), each tagged by type (exact-term lookup, numeric/table lookup, land-category rules, unanswerable); written by the author, not generated
+- [ ] Retrieval metrics: hit rate@k, MRR, recall@k, reported overall and per question type
+- [ ] Uncertainty: bootstrap confidence intervals over questions and a paired comparison between methods
 - [ ] Answer metrics: citation correctness, abstention rate on unanswerable questions
-- [ ] Results written to `eval/results/` and summarized in the README, with a before/after comparison for at least one design change (chunk size or hybrid vs dense)
+- [ ] Controlled comparisons that change one thing at a time (dense only, keyword only, hybrid, chunk size); results written to `eval/results/` and summarized in the README
+- [ ] Error analysis: read the questions each method got wrong and categorize why (table split across chunks, abbreviation mismatch, etc.); record in `docs/`
 - [ ] Tests for the metric code
 - [ ] Push
 
@@ -127,3 +130,12 @@ Rotate / revoke: console, API keys, then update `.env` and any CI secret.
 - [ ] "Known limitations" and "What I'd do differently" written from actual findings
 - [ ] `docs/` holds corpus notes and short architecture decision records (chunking, retrieval, embeddings)
 - [ ] Add a roadmap item to `C:\dev\roadmap-template.md` for anything here that applies to other projects (CI, dependabot, license, redaction filter, fresh-clone test)
+
+## 14. Writing sample (MSU hybrid MA in Forestry application)
+
+Written by the author in their own words, separate from the README. Confirm MSU's requirements (length, format, rules on AI assistance and disclosure) before drafting.
+
+- [ ] Confirm the prompt and requirements; decide the single research question (e.g. does hybrid retrieval beat dense-only on New York forest establishment documents?)
+- [ ] Outline: motivation, data, method, results, interpretation, limitations
+- [ ] Draft by the author; figures and tables generated from `eval/results/`
+- [ ] Revise for plain-language clarity; check every number against the results files
