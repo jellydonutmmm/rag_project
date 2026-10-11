@@ -10,7 +10,7 @@ cyclonedx-python-lib==11.12.0
 defusedxml==0.7.1
 detect-secrets==1.5.0
 distlib==0.4.3
-filelock==4.0.10
+filelock==4.0.12
 identify==2.6.20
 idna==3.20
 iniconfig==2.3.0
